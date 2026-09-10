@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PERIDOT.sv</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- =========================
+     ENCABEZADO
+========================= -->
+
+<header class="site-header">
+
+    <a href="#inicio" class="brand">
+        <img src="img/peridotlogo.jpg" alt="PERIDOT.sv">
+    </a>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#hombres">Hombres</a>
+        <a href="#mujeres">Mujeres</a>
+        <a href="#piedras">Piedras</a>
+        <a href="#personalizar">Hazlo Tú</a>
+        <a href="#pedido">Pedido</a>
+    </nav>
+
+    <a href="#pedido" class="cart-link">
+        🛒 <span id="cartCount">0</span>
+    </a>
+
+</header>
+
+
+<!-- =========================
+     INICIO
+========================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">JOYERÍA ARTESANAL</p>
+
+        <h1>
+            Pulseras que<br>
+            cuentan tu historia.
+        </h1>
+
+        <p class="hero-text">
+            Diseños hechos a mano con piedras naturales,
+            pensados para expresar tu estilo y personalidad.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#hombres" class="btn primary">
+                Ver colección
+            </a>
+
+            <a href="#personalizar" class="btn secondary">
+                Crear mi pulsera
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-art">
+
+        <div class="bracelet-art">
+
+            <span>◆</span>
+            <span>●</span>
+            <b>✦</b>
+            <span>●</span>
+            <i>◆</i>
+            <span>●</span>
+            <b>✦</b>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCCIÓN
+========================= -->
+
+<section class="intro">
+
+    <p class="eyebrow">
+        PERIDOT.SV
+    </p>
+
+    <h2>
+        Hecho para ti
+    </h2>
+
+    <p>
+        Descubre pulseras elaboradas cuidadosamente con
+        piedras naturales y materiales seleccionados.
+        Encuentra un diseño que represente tu personalidad
+        o crea uno completamente personalizado.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     HOMBRES
+========================= -->
+
+<section class="catalog-section" id="hombres">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">COLECCIÓN</p>
+
+            <h2>
+                Hombres
+            </h2>
+        </div>
+
+        <span>
+            Diseños masculinos
+        </span>
+
+    </div>
+
+
+    <div class="product-grid" id="menGrid">
+
+        <!-- Los productos se cargan desde JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MUJERES
+========================= -->
+
+<section class="catalog-section alt" id="mujeres">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">COLECCIÓN</p>
+
+            <h2>
+                Mujeres
+            </h2>
+        </div>
+
+        <span>
+            Diseños para cada estilo
+        </span>
+
+    </div>
+
+
+    <div class="product-grid" id="womenGrid">
+
+        <!-- Los productos se cargan desde JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PIEDRAS
+========================= -->
+
+<section class="stones" id="piedras">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">MATERIALES</p>
+
+            <h2>
+                Piedras naturales
+            </h2>
+        </div>
+
+        <span>
+            Conoce nuestros materiales
+        </span>
+
+    </div>
+
+
+    <div class="stone-grid">
+
+        <article class="stone-card">
+
+            <div class="stone-img amethyst"></div>
+
+            <h3>
+                Amatista
+            </h3>
+
+            <p>
+                Piedra conocida por sus tonos morados
+                y su apariencia elegante.
+            </p>
+
+            <button onclick="showStone('Amatista')">
+                Ver información
+            </button>
+
+        </article>
+
+
+        <article class="stone-card">
+
+            <div class="stone-img tiger"></div>
+
+            <h3>
+                Ojo de tigre
+            </h3>
+
+            <p>
+                Una piedra con tonos dorados y
+                cafés que aporta carácter al diseño.
+            </p>
+
+            <button onclick="showStone('Ojo de tigre')">
+                Ver información
+            </button>
+
+        </article>
+
+
+        <article class="stone-card">
+
+            <div class="stone-img rose"></div>
+
+            <h3>
+                Cuarzo rosa
+            </h3>
+
+            <p>
+                Piedra de tonos rosados utilizada
+                en diseños delicados.
+            </p>
+
+            <button onclick="showStone('Cuarzo rosa')">
+                Ver información
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PERSONALIZADOR
+========================= -->
+
+<section class="customizer-section" id="personalizar">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">
+                PERSONALIZA
+            </p>
+
+            <h2>
+                Hazlo Tú
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="customizer">
+
+        <!-- Vista previa -->
+
+        <div class="preview">
+
+            <span class="preview-label">
+                VISTA PREVIA
+            </span>
+
+            <div class="bracelet" id="bracelet">
+
+                <span class="custom-bead">●</span>
+                <span class="custom-bead">●</span>
+                <span class="custom-bead">●</span>
+
+            </div>
+
+            <strong id="customPrice">
+                Precio estimado: $15.00
+            </strong>
+
+        </div>
+
+
+        <!-- Opciones -->
+
+        <div class="beads-panel">
+
+            <h3>
+                Elige tus piezas
+            </h3>
+
+            <p>
+                Selecciona las piezas que quieres agregar
+                a tu pulsera personalizada.
+            </p>
+
+
+            <div class="beads">
+
+                <button
+                    class="bead-btn"
+                    onclick="addBead('●','base')">
+                    ●
+                </button>
+
+                <button
+                    class="bead-btn"
+                    onclick="addBead('◆','base')">
+                    ◆
+                </button>
+
+                <button
+                    class="bead-btn stone"
+                    onclick="addBead('✦','stone')">
+                    ✦
+                </button>
+
+                <button
+                    class="bead-btn"
+                    onclick="addBead('○','base')">
+                    ○
+                </button>
+
+                <button
+                    class="bead-btn"
+                    onclick="addBead('◇','base')">
+                    ◇
+                </button>
+
+            </div>
+
+
+            <button
+                class="btn primary"
+                onclick="addCustom()">
+                Agregar al carrito
+            </button>
+
+            <br><br>
+
+            <button
+                class="text-button"
+                onclick="clearBracelet()">
+                Limpiar diseño
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PEDIDO
+========================= -->
+
+<section class="form-section" id="pedido">
+
+    <div class="form-card">
+
+        <div>
+
+            <p class="eyebrow">
+                PEDIDOS
+            </p>
+
+            <h2>
+                Haz tu pedido
+            </h2>
+
+            <p>
+                Completa el formulario y nos pondremos
+                en contacto contigo para confirmar los
+                detalles de tu pedido.
+            </p>
+
+            <p>
+                También puedes utilizar este espacio para
+                solicitar una pulsera personalizada.
+            </p>
+
+        </div>
+
+
+        <form id="orderForm">
+
+            <label>
+                Nombre completo
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Escribe tu nombre"
+                    required>
+            </label>
+
+
+            <label>
+                Correo electrónico
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="correo@ejemplo.com"
+                    required>
+            </label>
+
+
+            <label>
+                Teléfono
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="0000-0000"
+                    required>
+            </label>
+
+
+            <label>
+                Producto
+
+                <select id="product" required>
+
+                    <option value="">
+                        Selecciona una pulsera
+                    </option>
+
+                    <option value="Pulsera Fiera">
+                        Pulsera Fiera
+                    </option>
+
+                    <option value="Cielo Profundo">
+                        Cielo Profundo
+                    </option>
+
+                    <option value="Selva Nocturna">
+                        Selva Nocturna
+                    </option>
+
+                    <option value="Pulsera Alpha">
+                        Pulsera Alpha
+                    </option>
+
+                    <option value="Pulsera Eclipse">
+                        Pulsera Eclipse
+                    </option>
+
+                    <option value="Venturina">
+                        Venturina
+                    </option>
+
+                    <option value="Pulsera Verde">
+                        Pulsera Verde
+                    </option>
+
+                    <option value="Cuarzo Rosa">
+                        Cuarzo Rosa
+                    </option>
+
+                    <option value="Personalizada">
+                        Pulsera personalizada
+                    </option>
+
+                </select>
+
+            </label>
+
+
+            <label>
+                Mensaje
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Escribe alguna indicación para tu pedido">
+                </textarea>
+
+            </label>
+
+
+            <button
+                type="submit"
+                class="btn primary">
+                Enviar pedido
+            </button>
+
+
+            <p
+                class="form-message"
+                id="formMessage">
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div>
+
+        <div class="brand">
+            <img
+                src="img/peridotlogo.jpg"
+                alt="PERIDOT.sv"
+                width="130">
+        </div>
+
+        <p>
+            Joyería artesanal hecha para expresar
+            tu estilo.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <p>
+            © 2026 PERIDOT.sv
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div
+    class="modal hidden"
+    id="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeModal()">
+            ×
+        </button>
+
+        <h2 id="modalTitle">
+            Producto
+        </h2>
+
+        <p id="modalText">
+            Información del producto.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
