@@ -808,95 +808,142 @@ h2 {
 
 
 /* =========================
-   FORMULARIO
+   FORMULARIO DE PEDIDO
 ========================= */
 
-.form-section {
-    padding: 90px 7%;
-
-    background: var(--cream);
+#pedido {
+    padding: 50px 20px;
 }
 
-.form-card {
-    max-width: 1050px;
+#pedido .form-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
 
-    margin: auto;
-
+/* Formulario en dos columnas */
+#orderForm {
     display: grid;
-
-    grid-template-columns:
-        0.8fr 1.2fr;
-
-    gap: 55px;
-
-    padding: 50px;
-
-    background: white;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 15px;
-
-    box-shadow: var(--shadow);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 25px;
 }
 
-.form-card > div > p:not(.eyebrow) {
-    line-height: 1.8;
-
-    color: var(--text-light);
+/* Títulos ocupan las dos columnas */
+#orderForm h3 {
+    grid-column: 1 / -1;
+    margin: 10px 0 0;
+    font-size: 18px;
 }
 
-.form-card form {
-    display: grid;
-
-    gap: 17px;
-}
-
-.form-card label {
-    display: grid;
-
-    gap: 7px;
-
+/* Campos */
+#orderForm label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     font-size: 13px;
-
-    font-weight: 700;
 }
 
-.form-card input,
-.form-card textarea,
-.form-card select {
+/* Inputs, selects y textareas */
+#orderForm input,
+#orderForm select,
+#orderForm textarea {
     width: 100%;
-
-    padding: 13px 15px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 7px;
-
-    outline: none;
-
-    background: var(--cream-light);
-
-    color: var(--text);
+    box-sizing: border-box;
+    padding: 9px 10px;
+    font-size: 13px;
+    border-radius: 5px;
 }
 
-.form-card input:focus,
-.form-card textarea:focus,
-.form-card select:focus {
-    border-color: var(--green);
-
-    box-shadow:
-        0 0 0 3px var(--green-light);
+/* Elementos que deben ocupar todo el ancho */
+#orderForm #orderSummary,
+#orderForm .order-total,
+#orderForm #locationFields,
+#orderForm #message,
+#orderForm button,
+#orderForm #formMessage {
+    grid-column: 1 / -1;
 }
 
-.form-message {
-    color: var(--green-dark);
-
-    font-weight: 700;
+/* Ubicación también en dos columnas */
+#locationFields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 25px;
 }
 
+/* La dirección ocupa todo el ancho */
+#locationFields label:last-child {
+    grid-column: 1 / -1;
+}
+
+/* Resumen */
+#orderSummary {
+    padding: 12px;
+    margin-top: -5px;
+    font-size: 13px;
+}
+
+/* Totales */
+.order-total {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.order-total p {
+    margin: 5px 0;
+}
+
+/* Textareas más compactos */
+#orderForm textarea {
+    min-height: 70px;
+    resize: vertical;
+}
+
+/* Botón */
+#orderForm button {
+    width: 200px;
+    margin: 5px auto 0;
+    padding: 10px 20px;
+}
+
+/* =========================
+   PANTALLAS PEQUEÑAS
+========================= */
+
+@media (max-width: 700px) {
+
+    #pedido {
+        padding: 30px 15px;
+    }
+
+    #pedido .form-card {
+        padding: 20px;
+    }
+
+    #orderForm {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    #orderForm h3,
+    #orderForm #orderSummary,
+    #orderForm .order-total,
+    #orderForm #locationFields,
+    #orderForm #message,
+    #orderForm button,
+    #orderForm #formMessage {
+        grid-column: 1;
+    }
+
+    #locationFields {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    #locationFields label:last-child {
+        grid-column: 1;
+    }
+}
 
 /* =========================
    FOOTER
