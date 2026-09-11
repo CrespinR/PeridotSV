@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PERIDOT.sv | Pedido</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a href="index.html" class="brand">
+        <img src="img/peridotlogo.jpg" alt="PERIDOT.sv">
+    </a>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="piedras.html">Piedras</a>
+        <a href="personalizar.html">Hazlo Tú</a>
+        <a href="pedido.html">Pedido</a>
+    </nav>
+
+    <a href="pedido.html" class="cart-link">
+        🛒 <span id="cartCount">0</span>
+    </a>
+
+</header>
+
+
+<!-- =========================
+     PEDIDO
+========================= -->
+
+<section class="form-section">
+
+    <div class="form-card">
+
+        <div>
+
+            <p class="eyebrow">
+                PEDIDOS
+            </p>
+
+            <h2>
+                Confirma tu pedido
+            </h2>
+
+            <p>
+                Completa tus datos y selecciona el método
+                de entrega y pago para solicitar tu pedido.
+            </p>
+
+        </div>
+
+
+        <form id="orderForm">
+
+
+            <!-- DATOS DEL CLIENTE -->
+
+            <h3>
+                Datos del cliente
+            </h3>
+
+
+            <label>
+
+                Nombre completo
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Escribe tu nombre"
+                    required>
+
+            </label>
+
+
+            <label>
+
+                Correo electrónico
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="correo@ejemplo.com">
+
+            </label>
+
+
+            <label>
+
+                Número de WhatsApp
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="0000-0000"
+                    required>
+
+            </label>
+
+
+            <!-- RESUMEN -->
+
+            <h3>
+                Resumen del pedido
+            </h3>
+
+
+            <div
+                id="orderSummary"
+                class="order-summary">
+
+                <p>
+                    No hay productos en el carrito.
+                </p>
+
+            </div>
+
+
+            <div class="order-total">
+
+                <p>
+                    Subtotal:
+                    <span id="orderSubtotal">
+                        $0.00
+                    </span>
+                </p>
+
+                <p>
+                    Costo de envío:
+                    <span id="orderShipping">
+                        $0.00
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Total:</strong>
+
+                    <strong id="orderTotal">
+                        $0.00
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <!-- ENTREGA -->
+
+            <h3>
+                Entrega
+            </h3>
+
+
+            <label>
+
+                Método de entrega
+
+                <select
+                    id="deliveryMethod"
+                    required>
+
+                    <option value="">
+                        Selecciona una opción
+                    </option>
+
+                    <option value="Acuerdo Mutuo">
+                        Acuerdo Mutuo
+                    </option>
+
+                    <option value="Envio">
+                        Envío
+                    </option>
+
+                </select>
+
+            </label>
+
+
+            <!-- UBICACIÓN -->
+
+            <div id="locationFields">
+
+
+                <label>
+
+                    Departamento
+
+                    <select id="department">
+
+                        <option value="">
+                            Selecciona un departamento
+                        </option>
+
+                        <option value="Ahuachapan">
+                            Ahuachapán
+                        </option>
+
+                        <option value="Cabanas">
+                            Cabañas
+                        </option>
+
+                        <option value="Chalatenango">
+                            Chalatenango
+                        </option>
+
+                        <option value="Cuscatlan">
+                            Cuscatlán
+                        </option>
+
+                        <option value="La Libertad">
+                            La Libertad
+                        </option>
+
+                        <option value="La Paz">
+                            La Paz
+                        </option>
+
+                        <option value="La Union">
+                            La Unión
+                        </option>
+
+                        <option value="Morazan">
+                            Morazán
+                        </option>
+
+                        <option value="San Miguel">
+                            San Miguel
+                        </option>
+
+                        <option value="San Salvador">
+                            San Salvador
+                        </option>
+
+                        <option value="San Vicente">
+                            San Vicente
+                        </option>
+
+                        <option value="Santa Ana">
+                            Santa Ana
+                        </option>
+
+                        <option value="Sonsonate">
+                            Sonsonate
+                        </option>
+
+                        <option value="Usulutan">
+                            Usulután
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    Municipio
+
+                    <select id="municipality">
+
+                        <option value="">
+                            Selecciona un municipio
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label id="deliveryPlaceContainer">
+
+                    Lugar de entrega
+
+                    <select id="deliveryPlace">
+
+                        <option value="">
+                            Selecciona un lugar
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    Dirección o detalles de entrega
+
+                    <textarea
+                        id="address"
+                        rows="4"
+                        placeholder="Indica una dirección, punto de referencia o detalles adicionales">
+                    </textarea>
+
+                </label>
+
+            </div>
+
+
+            <!-- FECHA -->
+
+            <label>
+
+                Fecha de entrega
+
+                <input
+                    type="date"
+                    id="deliveryDate"
+                    required>
+
+            </label>
+
+
+            <!-- PAGO -->
+
+            <h3>
+                Método de pago
+            </h3>
+
+
+            <label>
+
+                Método de pago
+
+                <select
+                    id="paymentMethod"
+                    required>
+
+                    <option value="">
+                        Selecciona una opción
+                    </option>
+
+                    <option value="Efectivo">
+                        Efectivo (Entrega en fisico)
+                    </option>
+
+                    <option value="Transferencia Bancaria">
+                        Transferencia Bancaria
+                    </option>
+
+                </select>
+
+            </label>
+
+
+            <!-- BOTÓN -->
+
+            <button
+                type="submit"
+                class="btn primary">
+
+                Solicitar carrito
+
+            </button>
+
+
+            <p
+                class="form-message"
+                id="formMessage">
+            </p>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div>
+
+        <div class="brand">
+
+            <img
+                src="img/peridotlogo.jpg"
+                alt="PERIDOT.sv"
+                width="130">
+
+        </div>
+
+        <p>
+            Joyería artesanal hecha para expresar
+            tu estilo.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <p>
+            © 2026 PERIDOT.sv
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/pedido.js"></script>
+
+</body>
+</html>

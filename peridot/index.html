@@ -4,33 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PERIDOT.sv</title>
+    <title>PERIDOT.sv | Inicio</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- =========================
-     ENCABEZADO
-========================= -->
-
 <header class="site-header">
 
-    <a href="#inicio" class="brand">
+    <a href="index.html" class="brand">
         <img src="img/peridotlogo.jpg" alt="PERIDOT.sv">
     </a>
 
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#hombres">Hombres</a>
-        <a href="#mujeres">Mujeres</a>
-        <a href="#piedras">Piedras</a>
-        <a href="#personalizar">Hazlo Tú</a>
-        <a href="#pedido">Pedido</a>
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="piedras.html">Piedras</a>
+        <a href="personalizar.html">Hazlo Tú</a>
+        <a href="pedido.html">Pedido</a>
     </nav>
 
-    <a href="#pedido" class="cart-link">
+    <a href="pedido.html" class="cart-link">
         🛒 <span id="cartCount">0</span>
     </a>
 
@@ -41,11 +36,13 @@
      INICIO
 ========================= -->
 
-<section class="hero" id="inicio">
+<section class="hero">
 
     <div class="hero-content">
 
-        <p class="eyebrow">JOYERÍA ARTESANAL</p>
+        <p class="eyebrow">
+            JOYERÍA ARTESANAL
+        </p>
 
         <h1>
             Pulseras que<br>
@@ -59,11 +56,11 @@
 
         <div class="hero-actions">
 
-            <a href="#hombres" class="btn primary">
+            <a href="categorias.html" class="btn primary">
                 Ver colección
             </a>
 
-            <a href="#personalizar" class="btn secondary">
+            <a href="personalizar.html" class="btn secondary">
                 Crear mi pulsera
             </a>
 
@@ -116,582 +113,6 @@
 
 
 <!-- =========================
-     HOMBRES
-========================= -->
-
-<section class="catalog-section" id="hombres">
-
-    <div class="section-heading">
-
-        <div>
-            <p class="eyebrow">COLECCIÓN</p>
-
-            <h2>
-                Hombres
-            </h2>
-        </div>
-
-        <span>
-            Diseños masculinos
-        </span>
-
-    </div>
-
-
-    <div class="product-grid" id="menGrid">
-
-        <!-- Los productos se cargan desde JavaScript -->
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     MUJERES
-========================= -->
-
-<section class="catalog-section alt" id="mujeres">
-
-    <div class="section-heading">
-
-        <div>
-            <p class="eyebrow">COLECCIÓN</p>
-
-            <h2>
-                Mujeres
-            </h2>
-        </div>
-
-        <span>
-            Diseños para cada estilo
-        </span>
-
-    </div>
-
-
-    <div class="product-grid" id="womenGrid">
-
-        <!-- Los productos se cargan desde JavaScript -->
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PIEDRAS
-========================= -->
-
-<section class="stones" id="piedras">
-
-    <div class="section-heading">
-
-        <div>
-            <p class="eyebrow">MATERIALES</p>
-
-            <h2>
-                Piedras naturales
-            </h2>
-        </div>
-
-        <span>
-            Conoce nuestros materiales
-        </span>
-
-    </div>
-
-
-    <div class="stone-grid">
-
-        <article class="stone-card">
-
-            <div class="stone-img amethyst"></div>
-
-            <h3>
-                Amatista
-            </h3>
-
-            <p>
-                Piedra conocida por sus tonos morados
-                y su apariencia elegante.
-            </p>
-
-            <button onclick="showStone('Amatista')">
-                Ver información
-            </button>
-
-        </article>
-
-
-        <article class="stone-card">
-
-            <div class="stone-img tiger"></div>
-
-            <h3>
-                Ojo de tigre
-            </h3>
-
-            <p>
-                Una piedra con tonos dorados y
-                cafés que aporta carácter al diseño.
-            </p>
-
-            <button onclick="showStone('Ojo de tigre')">
-                Ver información
-            </button>
-
-        </article>
-
-
-        <article class="stone-card">
-
-            <div class="stone-img rose"></div>
-
-            <h3>
-                Cuarzo rosa
-            </h3>
-
-            <p>
-                Piedra de tonos rosados utilizada
-                en diseños delicados.
-            </p>
-
-            <button onclick="showStone('Cuarzo rosa')">
-                Ver información
-            </button>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PERSONALIZADOR
-========================= -->
-
-<section class="customizer-section" id="personalizar">
-
-    <div class="section-heading">
-
-        <div>
-            <p class="eyebrow">
-                PERSONALIZA
-            </p>
-
-            <h2>
-                Hazlo Tú
-            </h2>
-        </div>
-
-    </div>
-
-
-    <div class="customizer">
-
-        <!-- Vista previa -->
-
-        <div class="preview">
-
-            <span class="preview-label">
-                VISTA PREVIA
-            </span>
-
-            <div class="bracelet" id="bracelet">
-
-                <span class="custom-bead">●</span>
-                <span class="custom-bead">●</span>
-                <span class="custom-bead">●</span>
-
-            </div>
-
-            <strong id="customPrice">
-                Precio estimado: $15.00
-            </strong>
-
-        </div>
-
-
-        <!-- Opciones -->
-
-        <div class="beads-panel">
-
-            <h3>
-                Elige tus piezas
-            </h3>
-
-            <p>
-                Selecciona las piezas que quieres agregar
-                a tu pulsera personalizada.
-            </p>
-
-
-            <div class="beads">
-
-                <button
-                    class="bead-btn"
-                    onclick="addBead('●','base')">
-                    ●
-                </button>
-
-                <button
-                    class="bead-btn"
-                    onclick="addBead('◆','base')">
-                    ◆
-                </button>
-
-                <button
-                    class="bead-btn stone"
-                    onclick="addBead('✦','stone')">
-                    ✦
-                </button>
-
-                <button
-                    class="bead-btn"
-                    onclick="addBead('○','base')">
-                    ○
-                </button>
-
-                <button
-                    class="bead-btn"
-                    onclick="addBead('◇','base')">
-                    ◇
-                </button>
-
-            </div>
-
-
-            <button
-                class="btn primary"
-                onclick="addCustom()">
-                Agregar al carrito
-            </button>
-
-            <br><br>
-
-            <button
-                class="text-button"
-                onclick="clearBracelet()">
-                Limpiar diseño
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PEDIDO
-========================= -->
-
-<section class="form-section" id="pedido">
-    <div class="form-card">
-
-```
-    <div>
-        <p class="eyebrow">
-            PEDIDOS
-        </p>
-
-        <h2>
-            Confirma tu pedido
-        </h2>
-
-        <p>
-            Completa tus datos y selecciona el método
-            de entrega y pago para solicitar tu pedido.
-        </p>
-        
-    </div>
-
-
-    <form id="orderForm">
-
-        <!-- =========================
-             DATOS DEL CLIENTE
-        ========================== -->
-
-        <h3>Datos del cliente</h3>
-
-        <label>
-            Nombre completo
-            <input
-                type="text"
-                id="name"
-                placeholder="Escribe tu nombre"
-                required>
-        </label>
-
-        <label>
-            Correo electrónico
-            <input
-                type="email"
-                id="email"
-                placeholder="correo@ejemplo.com">
-        </label>
-
-        <label>
-            Número de WhatsApp
-            <input
-                type="tel"
-                id="phone"
-                placeholder="0000-0000"
-                required>
-        </label>
-
-
-        <!-- =========================
-             RESUMEN DEL CARRITO
-        ========================== -->
-
-        <h3>Resumen del pedido</h3>
-
-        <div id="orderSummary" class="order-summary">
-
-            <!--
-                Los productos del carrito
-                se mostrarán aquí mediante JavaScript.
-            -->
-
-            <p>
-                No hay productos en el carrito.
-            </p>
-
-        </div>
-
-        <div class="order-total">
-
-            <p>
-                Subtotal:
-                <span id="orderSubtotal">$0.00</span>
-            </p>
-
-            <p>
-                Costo de envío:
-                <span id="orderShipping">$0.00</span>
-            </p>
-
-            <p>
-                <strong>Total:</strong>
-                <strong id="orderTotal">$0.00</strong>
-            </p>
-
-        </div>
-
-
-        <!-- =========================
-             MÉTODO DE ENTREGA
-        ========================== -->
-
-        <h3>Entrega</h3>
-
-        <label>
-            Método de entrega
-
-            <select id="deliveryMethod" required>
-
-                <option value="">
-                    Selecciona una opción
-                </option>
-
-                <option value="Acuerdo Mutuo">
-                    Acuerdo Mutuo
-                </option>
-
-                <option value="Envio">
-                    Envío
-                </option>
-
-            </select>
-        </label>
-
-
-        <!-- =========================
-             UBICACIÓN
-        ========================== -->
-
-        <div id="locationFields">
-
-            <label>
-                Departamento
-
-                <select id="department">
-                    <option value="">
-                        Selecciona un departamento
-                    </option>
-
-                    <option value="Ahuachapan">
-                        Ahuachapán
-                    </option>
-
-                    <option value="Cabanas">
-                        Cabañas
-                    </option>
-
-                    <option value="Chalatenango">
-                        Chalatenango
-                    </option>
-
-                    <option value="Cuscatlan">
-                        Cuscatlán
-                    </option>
-
-                    <option value="La Libertad">
-                        La Libertad
-                    </option>
-
-                    <option value="La Paz">
-                        La Paz
-                    </option>
-
-                    <option value="La Union">
-                        La Unión
-                    </option>
-
-                    <option value="Morazan">
-                        Morazán
-                    </option>
-
-                    <option value="San Miguel">
-                        San Miguel
-                    </option>
-
-                    <option value="San Salvador">
-                        San Salvador
-                    </option>
-
-                    <option value="San Vicente">
-                        San Vicente
-                    </option>
-
-                    <option value="Santa Ana">
-                        Santa Ana
-                    </option>
-
-                    <option value="Sonsonate">
-                        Sonsonate
-                    </option>
-
-                    <option value="Usulutan">
-                        Usulután
-                    </option>
-
-                </select>
-            </label>
-
-
-            <label>
-                Municipio
-
-                <select id="municipality">
-
-                    <option value="">
-                        Selecciona un municipio
-                    </option>
-
-                </select>
-            </label>
-
-
-            <label id="deliveryPlaceContainer">
-
-                Lugar de entrega
-
-                <select id="deliveryPlace">
-
-                    <option value="">
-                        Selecciona un lugar
-                    </option>
-
-                </select>
-
-            </label>
-
-
-            <label>
-                Dirección o detalles de entrega
-
-                <textarea
-                    id="address"
-                    rows="4"
-                    placeholder="Indica una dirección, punto de referencia o detalles adicionales">
-                </textarea>
-
-            </label>
-
-        </div>
-
-
-        <!-- =========================
-             FECHA DE ENTREGA
-        ========================== -->
-
-        <label>
-            Fecha de entrega
-
-            <input
-                type="date"
-                id="deliveryDate"
-                required>
-        </label>
-
-
-        <!-- =========================
-             MÉTODO DE PAGO
-        ========================== -->
-
-        <h3>Método de pago</h3>
-
-        <label>
-            Método de pago
-
-            <select id="paymentMethod" required>
-
-                <option value="">
-                    Selecciona una opción
-                </option>
-
-                <option value="Efectivo">
-                    Efectivo (Entrega en fisico)
-                </option>
-
-                <option value="Transferencia Bancaria">
-                    Transferencia Bancaria
-                </option>
-
-            </select>
-        </label>
-
-
-        <!-- =========================
-             BOTÓN
-        ========================== -->
-
-        <button
-            type="submit"
-            class="btn primary">
-            Solicitar carrito
-        </button>
-
-        <p
-            class="form-message"
-            id="formMessage">
-        </p>
-
-    </form>
-
-</div>
-```
-
-</section>
-
-
-
-<!-- =========================
      FOOTER
 ========================= -->
 
@@ -713,7 +134,6 @@
 
     </div>
 
-
     <div>
 
         <p>
@@ -723,38 +143,6 @@
     </div>
 
 </footer>
-
-
-<!-- =========================
-     MODAL
-========================= -->
-
-<div
-    class="modal hidden"
-    id="modal">
-
-    <div class="modal-box">
-
-        <button
-            class="close"
-            onclick="closeModal()">
-            ×
-        </button>
-
-        <h2 id="modalTitle">
-            Producto
-        </h2>
-
-        <p id="modalText">
-            Información del producto.
-        </p>
-
-    </div>
-
-</div>
-
-
-<script src="script.js"></script>
 
 </body>
 </html>

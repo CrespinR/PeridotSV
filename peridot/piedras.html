@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PERIDOT.sv | Piedras</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a href="index.html" class="brand">
+        <img src="img/peridotlogo.jpg" alt="PERIDOT.sv">
+    </a>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="piedras.html">Piedras</a>
+        <a href="personalizar.html">Hazlo Tú</a>
+        <a href="pedido.html">Pedido</a>
+    </nav>
+
+    <a href="pedido.html" class="cart-link">
+        🛒 <span id="cartCount">0</span>
+    </a>
+
+</header>
+
+
+<!-- =========================
+     PIEDRAS
+========================= -->
+
+<section class="stones">
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                MATERIALES
+            </p>
+
+            <h2>
+                Piedras naturales
+            </h2>
+
+        </div>
+
+        <span>
+            Conoce nuestros materiales
+        </span>
+
+    </div>
+
+
+    <div class="stone-grid">
+
+
+        <!-- AMATISTA -->
+
+        <article class="stone-card">
+
+            <div class="stone-img amethyst"></div>
+
+            <h3>
+                Amatista
+            </h3>
+
+            <p>
+                Piedra conocida por sus tonos morados
+                y su apariencia elegante.
+            </p>
+
+            <button onclick="showStone('Amatista')">
+                Ver información
+            </button>
+
+        </article>
+
+
+        <!-- OJO DE TIGRE -->
+
+        <article class="stone-card">
+
+            <div class="stone-img tiger"></div>
+
+            <h3>
+                Ojo de tigre
+            </h3>
+
+            <p>
+                Una piedra con tonos dorados y
+                cafés que aporta carácter al diseño.
+            </p>
+
+            <button onclick="showStone('Ojo de tigre')">
+                Ver información
+            </button>
+
+        </article>
+
+
+        <!-- CUARZO ROSA -->
+
+        <article class="stone-card">
+
+            <div class="stone-img rose"></div>
+
+            <h3>
+                Cuarzo rosa
+            </h3>
+
+            <p>
+                Piedra de tonos rosados utilizada
+                en diseños delicados.
+            </p>
+
+            <button onclick="showStone('Cuarzo rosa')">
+                Ver información
+            </button>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div>
+
+        <div class="brand">
+
+            <img
+                src="img/peridotlogo.jpg"
+                alt="PERIDOT.sv"
+                width="130">
+
+        </div>
+
+        <p>
+            Joyería artesanal hecha para expresar
+            tu estilo.
+        </p>
+
+    </div>
+
+    <div>
+
+        <p>
+            © 2026 PERIDOT.sv
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div class="modal hidden" id="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeModal()">
+            ×
+        </button>
+
+        <h2 id="modalTitle">
+            Piedra
+        </h2>
+
+        <p id="modalText">
+            Información de la piedra.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="js/piedras.js"></script>
+
+</body>
+</html>

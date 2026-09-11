@@ -692,6 +692,15 @@ h2 {
     margin: 15px 0;
 }
 
+.bracelet:has(.empty-bracelet)::before {
+    display: none;
+}
+
+.bracelet:has(.empty-bracelet) {
+    border: none;
+    background: none;
+}
+
 .bracelet::before {
     content: "";
 
@@ -806,13 +815,30 @@ h2 {
     cursor: pointer;
 }
 
+.empty-bracelet {
+    color: var(--text-light);
+    font-size: 14px;
+    font-style: italic;
+}
+
 
 /* =========================
    FORMULARIO DE PEDIDO
 ========================= */
 
+.form-section {
+    padding: 50px 30px;
+}
+
+.form-card {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
 #pedido {
-    padding: 50px 20px;
+    margin: 40px auto;
+    padding: 0 30px;
+    max-width: 1000px;
 }
 
 #pedido .form-card {
@@ -942,6 +968,12 @@ h2 {
 
     #locationFields label:last-child {
         grid-column: 1;
+    }
+
+    @media (max-width: 600px) {
+        .form-section {
+            padding: 30px 15px;
+        }
     }
 }
 
@@ -1162,4 +1194,18 @@ footer p {
 
         padding: 40px 5%;
     }
+}
+
+.bracelet .empty-bracelet {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--text-light);
+    font-size: 14px;
+    font-style: italic;
+    white-space: nowrap;
+
+    z-index: 2;
 }

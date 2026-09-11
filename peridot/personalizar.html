@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PERIDOT.sv | Hazlo Tú</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a href="index.html" class="brand">
+        <img src="img/peridotlogo.jpg" alt="PERIDOT.sv">
+    </a>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="piedras.html">Piedras</a>
+        <a href="personalizar.html">Hazlo Tú</a>
+        <a href="pedido.html">Pedido</a>
+    </nav>
+
+    <a href="pedido.html" class="cart-link">
+        🛒 <span id="cartCount">0</span>
+    </a>
+
+</header>
+
+
+<!-- =========================
+     PERSONALIZADOR
+========================= -->
+
+<section class="customizer-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                PERSONALIZA
+            </p>
+
+            <h2>
+                Hazlo Tú
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="customizer">
+
+
+        <!-- VISTA PREVIA -->
+
+        <div class="preview">
+
+            <span class="preview-label">
+                VISTA PREVIA
+            </span>
+
+            <div class="bracelet" id="bracelet">
+            </div>
+
+            <strong id="customPrice">
+                Precio estimado: $0.00
+            </strong>
+
+        </div>
+
+
+        <!-- OPCIONES -->
+
+        <div class="beads-panel">
+
+            <h3>
+                Elige tus piezas
+            </h3>
+
+            <p>
+                Selecciona las piezas que quieres agregar
+                a tu pulsera personalizada.
+            </p>
+
+
+            <div class="beads">
+
+                <button
+                    class="bead-btn"
+                    onclick="addBead('●','base')">
+                    ●
+                </button>
+
+                <button
+                    class="bead-btn"
+                    onclick="addBead('◆','base')">
+                    ◆
+                </button>
+
+                <button
+                    class="bead-btn stone"
+                    onclick="addBead('✦','stone')">
+                    ✦
+                </button>
+
+                <button
+                    class="bead-btn"
+                    onclick="addBead('○','base')">
+                    ○
+                </button>
+
+                <button
+                    class="bead-btn"
+                    onclick="addBead('◇','base')">
+                    ◇
+                </button>
+
+            </div>
+
+
+            <button
+                class="btn primary"
+                onclick="addCustom()">
+                Agregar al carrito
+            </button>
+
+            <br><br>
+
+            <button
+                class="text-button"
+                onclick="clearBracelet()">
+                Limpiar diseño
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div>
+
+        <div class="brand">
+            <img
+                src="img/peridotlogo.jpg"
+                alt="PERIDOT.sv"
+                width="130">
+        </div>
+
+        <p>
+            Joyería artesanal hecha para expresar
+            tu estilo.
+        </p>
+
+    </div>
+
+    <div>
+
+        <p>
+            © 2026 PERIDOT.sv
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/personalizar.js"></script>
+
+</body>
+</html>

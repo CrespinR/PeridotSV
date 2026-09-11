@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PERIDOT.sv | Categorías</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a href="index.html" class="brand">
+        <img src="img/peridotlogo.jpg" alt="PERIDOT.sv">
+    </a>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="piedras.html">Piedras</a>
+        <a href="personalizar.html">Hazlo Tú</a>
+        <a href="pedido.html">Pedido</a>
+    </nav>
+
+    <a href="pedido.html" class="cart-link">
+        🛒 <span id="cartCount">0</span>
+    </a>
+
+</header>
+
+
+<!-- =========================
+     HOMBRES
+========================= -->
+
+<section class="catalog-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                COLECCIÓN
+            </p>
+
+            <h2>
+                Hombres
+            </h2>
+
+        </div>
+
+        <span>
+            Diseños masculinos
+        </span>
+
+    </div>
+
+
+    <div class="product-grid" id="menGrid">
+
+        <!-- Productos cargados mediante JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MUJERES
+========================= -->
+
+<section class="catalog-section alt">
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                COLECCIÓN
+            </p>
+
+            <h2>
+                Mujeres
+            </h2>
+
+        </div>
+
+        <span>
+            Diseños para cada estilo
+        </span>
+
+    </div>
+
+
+    <div class="product-grid" id="womenGrid">
+
+        <!-- Productos cargados mediante JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div>
+
+        <div class="brand">
+            <img
+                src="img/peridotlogo.jpg"
+                alt="PERIDOT.sv"
+                width="130">
+        </div>
+
+        <p>
+            Joyería artesanal hecha para expresar
+            tu estilo.
+        </p>
+
+    </div>
+
+    <div>
+
+        <p>
+            © 2026 PERIDOT.sv
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div class="modal hidden" id="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeModal()">
+            ×
+        </button>
+
+        <h2 id="modalTitle">
+            Producto
+        </h2>
+
+        <p id="modalText">
+            Información del producto.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="js/productos.js"></script>
+
+</body>
+</html>
