@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Panel principal | PERIDOT Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="brand">PERIDOT</div>
+            <div class="brand-sub">PANEL ADMINISTRATIVO</div>
+            <nav>
+                <div class="nav-label">GESTIÓN DE TIENDA</div><a class="nav-link active" href="index.html"><span
+                        class="nav-icon">⌂</span>Inicio</a><a class="nav-link " href="pulseras.html"><span
+                        class="nav-icon">◈</span>Pulseras</a><a class="nav-link " href="piedras.html"><span
+                        class="nav-icon">✧</span>Piedras</a><a class="nav-link " href="categorias.html"><span
+                        class="nav-icon">▦</span>Categorías</a><a class="nav-link " href="inventario.html"><span
+                        class="nav-icon">▤</span>Inventario</a><a class="nav-link " href="pedidos.html"><span
+                        class="nav-icon">▣</span>Pedidos</a><a class="nav-link " href="personalizadas.html"><span
+                        class="nav-icon">◇</span>Personalizadas</a><a class="nav-link " href="usuarios.html"><span
+                        class="nav-icon">♙</span>Usuarios</a><a class="nav-link " href="valoraciones.html"><span
+                        class="nav-icon">☆</span>Valoraciones</a>
+            </nav>
+            <div class="sidebar-bottom">PERIDOT.sv · Administración<br>Prototipo académico</div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div class="crumb">PERIDOT / Administración / <strong>Panel principal</strong></div>
+                <div class="avatar">A</div>
+            </header>
+            <div class="content">
+                <div class="page-head">
+                    <div>
+                        <div class="eyebrow">Administración de tienda</div>
+                        <h1>Panel principal</h1>
+                        <p>Resumen general de PERIDOT y accesos rápidos.</p>
+                    </div><a class="btn light" href="../index.html">↗ Ver tienda</a>
+                </div>
+                <div class="stats">
+                    <article class="stat">
+                        <div class="stat-top">Pedidos pendientes <span class="stat-icon">▣</span></div>
+                        <div class="stat-value" id="statOrders">0</div>
+                        <div class="stat-note">Pedidos por revisar</div>
+                    </article>
+                    <article class="stat">
+                        <div class="stat-top">Pulseras registradas <span class="stat-icon">◈</span></div>
+                        <div class="stat-value" id="statProducts">0</div>
+                        <div class="stat-note">Catálogo administrable</div>
+                    </article>
+                    <article class="stat">
+                        <div class="stat-top">Productos con poco stock <span class="stat-icon">▤</span></div>
+                        <div class="stat-value" id="statLowStock">0</div>
+                        <div class="stat-note">Revisar inventario</div>
+                    </article>
+                    <article class="stat">
+                        <div class="stat-top">Usuarios <span class="stat-icon">♙</span></div>
+                        <div class="stat-value" id="statUsers">0</div>
+                        <div class="stat-note">Cuentas registradas</div>
+                    </article>
+                </div>
+                <section class="panel">
+                    <div class="panel-head">
+                        <h2>Accesos rápidos</h2>
+                    </div>
+                    <div class="quick-links"><a class="quick-link"
+                            href="pulseras.html"><span>◈</span><strong>Administrar pulseras</strong><span>Crear y
+                                actualizar productos.</span></a><a class="quick-link"
+                            href="inventario.html"><span>▤</span><strong>Revisar inventario</strong><span>Consultar y
+                                ajustar existencias.</span></a><a class="quick-link"
+                            href="pedidos.html"><span>▣</span><strong>Gestionar pedidos</strong><span>Actualizar
+                                preparación y entrega.</span></a><a class="quick-link"
+                            href="piedras.html"><span>✧</span><strong>Gestionar piedras</strong><span>Mantener
+                                componentes disponibles.</span></a><a class="quick-link"
+                            href="usuarios.html"><span>♙</span><strong>Usuarios y roles</strong><span>Controlar accesos
+                                al sistema.</span></a><a class="quick-link"
+                            href="valoraciones.html"><span>☆</span><strong>Valoraciones</strong><span>Revisar
+                                puntuaciones recibidas.</span></a></div>
+                </section>
+                <div class="notice">Prototipo académico: los datos de ejemplo se guardan temporalmente en este
+                    navegador. Aún no está conectado a PostgreSQL.</div>
+            </div>
+        </main>
+    </div>
+    <div class="modal-backdrop" id="modalBackdrop">
+        <section class="modal" role="dialog" aria-modal="true">
+            <div class="modal-head">
+                <h2 id="modalTitle">Nuevo registro</h2><button class="close" id="closeModal"
+                    aria-label="Cerrar">×</button>
+            </div>
+            <form id="recordForm">
+                <div class="form-grid" id="formFields"></div>
+                <div class="form-actions"><button type="button" class="btn light"
+                        id="cancelBtn">Cancelar</button><button type="submit" class="btn primary">Guardar</button></div>
+            </form>
+        </section>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Inventario | PERIDOT Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="brand">PERIDOT</div>
+            <div class="brand-sub">PANEL ADMINISTRATIVO</div>
+            <nav>
+                <div class="nav-label">GESTIÓN DE TIENDA</div><a class="nav-link " href="index.html"><span
+                        class="nav-icon">⌂</span>Inicio</a><a class="nav-link " href="pulseras.html"><span
+                        class="nav-icon">◈</span>Pulseras</a><a class="nav-link " href="piedras.html"><span
+                        class="nav-icon">✧</span>Piedras</a><a class="nav-link " href="categorias.html"><span
+                        class="nav-icon">▦</span>Categorías</a><a class="nav-link active" href="inventario.html"><span
+                        class="nav-icon">▤</span>Inventario</a><a class="nav-link " href="pedidos.html"><span
+                        class="nav-icon">▣</span>Pedidos</a><a class="nav-link " href="personalizadas.html"><span
+                        class="nav-icon">◇</span>Personalizadas</a><a class="nav-link " href="usuarios.html"><span
+                        class="nav-icon">♙</span>Usuarios</a><a class="nav-link " href="valoraciones.html"><span
+                        class="nav-icon">☆</span>Valoraciones</a>
+            </nav>
+            <div class="sidebar-bottom">PERIDOT.sv · Administración<br>Prototipo académico</div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div class="crumb">PERIDOT / Administración / <strong>Inventario</strong></div>
+                <div class="avatar">A</div>
+            </header>
+            <div class="content">
+                <div class="page-head">
+                    <div>
+                        <div class="eyebrow">Administración de tienda</div>
+                        <h1>Inventario</h1>
+                        <p>Consulta existencias y registra ajustes de stock.</p>
+                    </div>
+                </div>
+                <section class="panel">
+                    <div class="panel-head">
+                        <h2>Listado de inventario</h2><button class="btn primary" id="addBtn">＋ Nuevo registro</button>
+                    </div>
+                    <div class="filters"><input class="control search" id="searchInput" placeholder="Buscar..."
+                            aria-label="Buscar registros"><select class="control" id="filterSelect">
+                            <option value="">Todos los registros</option>
+                        </select></div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead id="tableHead"></thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                    <div class="empty" id="emptyState" hidden>No hay registros para mostrar.</div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <div class="modal-backdrop" id="modalBackdrop">
+        <section class="modal" role="dialog" aria-modal="true">
+            <div class="modal-head">
+                <h2 id="modalTitle">Nuevo registro</h2><button class="close" id="closeModal"
+                    aria-label="Cerrar">×</button>
+            </div>
+            <form id="recordForm">
+                <div class="form-grid" id="formFields"></div>
+                <div class="form-actions"><button type="button" class="btn light"
+                        id="cancelBtn">Cancelar</button><button type="submit" class="btn primary">Guardar</button></div>
+            </form>
+        </section>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/inventario.js"></script>
+</body>
+
+</html>
